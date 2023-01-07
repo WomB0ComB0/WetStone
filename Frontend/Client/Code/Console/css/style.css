@@ -1,0 +1,215 @@
+.main-body {
+    background-color: rgba(46, 7, 119, 0.744);
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem 6rem;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    display: flex;
+    /* border: 2px solid black; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: fit-content;
+}
+
+.primary-heading {
+    color: white;
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.search-container {
+    margin: 2rem 0;
+    display: flex;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    outline: none;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 80%;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    margin: 0 3rem;
+    padding: 0.1rem 1rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.search-icon {
+    color: black !important;
+    position: relative !important;
+    font-size: 2rem !important;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+
+.card-image:hover {
+    transition: all 200ms linear;
+    box-shadow: 0 0 20px rgb(71, 28, 112);
+}
+
+.card-title {
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.secondary-heading {
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    width: 50%;
+}
+
+.title-container, .headline-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.7rem 0;
+}
+
+.title-container input, .headline-container input {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    margin: 0.3rem 0;
+}
+
+#upload, #upload-image {
+    display: none;
+}
+
+.upload-container {
+    width: 100%;
+    margin: 0.7rem 0;
+    height: 6rem;
+    display: grid;
+    place-items: center;
+}
+
+.upload-file {
+    background-color: white;
+    text-align: center;
+    height: 100%;
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+}
+
+.term-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: white;
+    margin: 0.7rem 0;
+}
+
+.term-def {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 3rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.term_input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    margin: 1.4rem 0;
+    padding: 0.3rem 0.6rem;
+    outline: none;
+}
+
+.image-flashcard {
+    display: flex;
+    margin: 10px auto;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add_image_btn {
+    color: rgb(107, 107, 215);
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.flashcard_btn {
+    padding: 0.3rem 0.8rem;
+    color: white;
+    background-color: blue;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+.sub_btn {
+    background-color: rgb(245, 245, 106);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    width: 30%;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sub_btn:hover {
+    background-color: rgb(227, 227, 60);
+}

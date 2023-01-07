@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta charset="UTF-8" />
+   <title> Console | Wetstone </title>
+   <meta name="description"
+      content="jSide Menu is a free jQuery menu plugin that helps you create side vertical navigation menu with dropdowns, fully responsive and customizable." />
+
+   <!--Google Fonts-->
+   <link href="https://fonts.googleapis.com/css?family=Hind|Oxygen" rel="stylesheet" />
+   <!--jQuery-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!--Material Design Iconic Font-->
+   <link rel="stylesheet" href="material-design/css/material-design-iconic-font.css" />
+
+   <!--jSide Menu Plugin-->
+   <script src="js/jquery.jside.menu.js"></script>
+   <!--jSide Menu CSS-->
+   <link rel="stylesheet" href="css/jside-menu.css" />
+   <!--jSide Skins-->
+   <link rel="stylesheet" href="css/jside-skins.css" />
+
+   <link rel="stylesheet" href="./css/style.css">
+
+   <script>
+      $(document).ready(function () {
+
+         $(".menu-container").jSideMenu({
+            jSidePosition: "position-left", //possible options position-left or position-right
+
+            jSideSticky: true, // menubar will be fixed on top, false to set static
+
+            jSideSkin: "default-skin", // to apply custom skin, just put its name in this string
+         });
+      }); 
+   </script>
+
+</head>
+
+<body>
+
+   <menu class="menubar">
+      <menuitem>
+      <button class="menu-trigger"> </button>
+      </menuitem>
+
+      <menuitem class="logo" title="Your Logo Goes Here">
+      <a href="#1"> Wetstone </a>
+      </menuitem>
+   </menu>
+
+
+   <div class="menu-head">
+      <span class="layer">
+         <div class="col">
+            <div class="row for-pic">
+               <div class="profile-pic">
+                  <img src="image/logo.png" alt="logo" />
+               </div>
+            </div>
+            <div class="row for-name">
+               <h3 title="User Name"> Console </h3>
+               <span class="tagline"> Do your main tasks here</span>
+            </div>
+         </div> <!--//col-->
+      </span>
+   </div> <!--//menu-head-->
+
+   <nav class="menu-container">
+
+      <ul class="menu-items">
+
+         <li><span class="item-icon"><i class="zmdi zmdi-home"></i></span> <a href="./index.html">
+            Home </a></li>
+
+         <li><span class="item-icon"><i class="zmdi zmdi-keyboard"></i></span> <a href="./CreateTask.html">
+               Create Task </a></li>
+
+         <li> <span class="item-icon"> <i class="zmdi zmdi-edit"></i> </span> <a href="#1">
+               Edit Task</a></li>
+
+
+         <li> <span class="item-icon"> <i class="zmdi zmdi-delete"></i> </span> <a href="#1">
+               Delete Task</a></li>
+
+      </ul>
+
+
+   </nav>
+   <div class="dim-overlay"></div>
+
+   <!--End jSide Menu-->
+
+   <main>
+      <section class="main-body">
+
+         <div class="container">
+            <h1 class="primary-heading">Welcome Rohan !</h1>
+
+            <div class="search-container">
+               <input type="text" placeholder="Search subjects, topics">
+               <span class="item-icon search-icon"><i class="zmdi zmdi-search"></i></span>
+            </div>
+
+            <div class="card-container">
+
+               <div class="card">
+                  <img src="./image/astro.jpeg" alt="work-image" class="card-image">
+                  <p class="card-title">Astronomy</p>
+               </div>
+
+               <div class="card">
+                  <img src="./image/brain.jpg" alt="work-image" class="card-image">
+                  <p class="card-title">Brain</p>
+               </div>
+
+               <div class="card">
+                  <img src="./image/rocket.jpeg" alt="work-image" class="card-image">
+                  <p class="card-title">Rocket</p>
+               </div>
+
+               <div class="card">
+                  <img src="./image/astro.jpeg" alt="work-image" class="card-image">
+                  <p class="card-title">Astronomy</p>
+               </div>
+
+               <div class="card">
+                  <img src="./image/brain.jpg" alt="work-image" class="card-image">
+                  <p class="card-title">Brain</p>
+               </div>
+
+               <div class="card">
+                  <img src="./image/rocket.jpeg" alt="work-image" class="card-image">
+                  <p class="card-title">Rocket</p>
+               </div>
+
+
+            </div>
+         </div>
+      </section>
+
+   </main>
+
+
+   <!--DEMO ONLY FILES-->
+   <!-- Demo CSS-->
+   <!-- <link rel="stylesheet" href="docs/demo-only.css" />
+<script src="docs/demo-only.js"></script> -->
+
+
+
+   <!-- <footer class="credit">
+      Coded with <span title="Coffee"></span> by Asif Mughal &copy; 2018 - <a href="https://www.codehim.com"
+         rel="dofollow" title="Awesome Web Projects and Tutorials" target="_blank"> Codehim.com </a>
+   </footer> -->
+
+</body>
+
+</html>
