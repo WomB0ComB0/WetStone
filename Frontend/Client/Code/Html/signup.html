@@ -62,21 +62,21 @@
     var signUpText1 = document.getElementById("signUpText1");
     if (signUpText1) {
       signUpText1.addEventListener("click", function (e) {
-        window.location.href = "./log-in-page.html";
+        window.location.pathname = "./log-in-page.html";
       });
     }
     
     var forgotPassword = document.getElementById("forgotPassword");
     if (forgotPassword) {
       forgotPassword.addEventListener("click", function (e) {
-        window.location.href = "./forgot-password-page.html";
+        window.location.pathname = "./forgot-password-page.html";
       });
     }
     
     var title = document.getElementById("title");
     if (title) {
       title.addEventListener("click", function (e) {
-        window.location.href = "./landing-page.html";
+        window.location.pathname = "./landing-page.html";
       });
     }
     var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");

@@ -71,28 +71,28 @@
       var headerButtonContainer = document.getElementById("headerButtonContainer");
       if (headerButtonContainer) {
         headerButtonContainer.addEventListener("click", function (e) {
-          window.location.href = "./log-in-page.html";
+          window.location.pathname = "";"./log-in-page.html";
         });
       }
       
       var signUpButton = document.getElementById("landing-page-signup-button");
       if (signUpButton) {
         signUpButton.addEventListener("click", function (e) {
-          window.location.href = "/";
+          window.location.pathname = "";"/";
         });
       }
       
       var signUpNav = document.getElementById("landing-page-signup-container");
       if (signUpNav) {
         signUpNav.addEventListener("click", function (e) {
-          window.location.href = "/";
+          window.location.pathname = "";"/";
         });
       }
       
       var loginNav = document.getElementById("landing-page-login-container");
       if (loginNav) {
         loginNav.addEventListener("click", function (e) {
-          window.location.href = "./log-in-page.html";
+          window.location.pathname = "";"./log-in-page.html";
         });
       }
       </script>

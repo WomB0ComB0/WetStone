@@ -31,8 +31,7 @@
           <div class="form-login-container1">
             <div class="form-header2">
               <div class="form-header3"><div class="login">Login</div></div>
-              <a class="title1" href="." id="title" data-animate-on-scroll>
-                <div class="wetstone1">WetStone</div>
+              <a class="title1" href="." id="title" data-animate-on-scroll><div class="wetstone1">WetStone</div>
               </a>
             </div>
             <form class="user-auths1">
@@ -85,21 +84,21 @@
       var title = document.getElementById("title");
       if (title) {
         title.addEventListener("click", function (e) {
-          window.location.href = "/Frontend/Client/Code/Html/landing-page.html";
+          window.location.pathname = "/Frontend/Client/Code/Html/landing-page.html";
         });
       }
       
       var signUpText1 = document.getElementById("signUpText1");
       if (signUpText1) {
         signUpText1.addEventListener("click", function (e) {
-          window.location.href = "/";
+          window.location.pathname = "/";
         });
       }
       
       var forgotPassword = document.getElementById("forgotPassword");
       if (forgotPassword) {
         forgotPassword.addEventListener("click", function (e) {
-          window.location.href = "/Frontend/Client/Code/Html/forgot-password-page.html";
+          window.location.pathname = "/Frontend/Client/Code/Html/forgot-password-page.html";
         });
       }
       var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
