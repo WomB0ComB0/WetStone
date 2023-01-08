@@ -21,7 +21,7 @@
       <img
         class="alexandr-gerdt-sed6kceyvme-uns-icon1"
         alt=""
-        src="public/alexandrgerdtsed6kceyvmeunsplash-3@2x.png"
+        src="/Frontend/Client/Images/alexandrgerdtsed6kceyvmeunsplash-1@2x.png"
       />
       <div class="login-page-child"></div>
       <div class="main-container1">
@@ -31,9 +31,9 @@
           <div class="form-login-container1">
             <div class="form-header2">
               <div class="form-header3"><div class="login">Login</div></div>
-              <a class="title1" href="." id="title" data-animate-on-scroll
-                ><div class="wetstone1">WetStone</div></a
-              >
+              <a class="title1" href="." id="title" data-animate-on-scroll>
+                <div class="wetstone1">WetStone</div>
+              </a>
             </div>
             <form class="user-auths1">
               <div class="breakline1">
@@ -64,7 +64,7 @@
                   required
                 /><a
                   class="forgot-password1"
-                  href="./forgot-password-page.html"
+                  href="/Frontend/Client/Code/Html/forgot-password-page.html"
                   id="forgotPassword"
                   >Forgot Password?</a
                 >
@@ -85,7 +85,7 @@
       var title = document.getElementById("title");
       if (title) {
         title.addEventListener("click", function (e) {
-          window.location.href = "./landing-page.html";
+          window.location.href = "/Frontend/Client/Code/Html/landing-page.html";
         });
       }
       
@@ -99,7 +99,7 @@
       var forgotPassword = document.getElementById("forgotPassword");
       if (forgotPassword) {
         forgotPassword.addEventListener("click", function (e) {
-          window.location.href = "./forgot-password-page.html";
+          window.location.href = "/Frontend/Client/Code/Html/forgot-password-page.html";
         });
       }
       var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");

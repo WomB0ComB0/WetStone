@@ -1,136 +1,102 @@
+!
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fredoka One:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap"
-    />
-  </head>
-  <body>
-    <main class="signup-page" id="signup-main-container">
-      <img
-        class="alexandr-gerdt-sed6kceyvme-uns-icon"
-        alt=""
-        src="public/alexandrgerdtsed6kceyvmeunsplash-1@2x.png"
-      />
-      <div class="signup-page-child"></div>
-      <div class="main-container" id="center-containers">
-        <div class="main-container-child"></div>
-        <div class="form-login-container-backgroun" id="form-login-container">
-          <div class="form-login-container-backgroun-child"></div>
-          <div class="form-login-container">
-            <div class="user-auths" id="user-auth-container">
-              <div class="breakline">
-                <div class="breakline-child"></div>
-                <div class="breakline-item"></div>
-                <div class="other">Other</div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka One:wght@400&display=swap"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap"/>
+</head>
+<body>
+  <main class="signup-page" id="signup-main-container">
+    <img class="alexandr-gerdt-sed6kceyvme-uns-icon" alt="" src="/Frontend/Client/Images/alexandrgerdtsed6kceyvmeunsplash-1@2x.png"/>
+    <div class="signup-page-child"></div>
+    <div class="main-container" id="center-containers">
+      <div class="main-container-child"></div>
+      <div class="form-login-container-backgroun" id="form-login-container">
+        <div class="form-login-container-backgroun-child"></div>
+        <div class="form-login-container">
+          <div class="user-auths" id="user-auth-container">
+            <div class="breakline">
+              <div class="breakline-child"></div>
+              <div class="breakline-item"></div>
+              <div class="other">Other</div>
+            </div>
+            <div class="signup-redirect">
+              <div class="sign-up-text">Don’t have an account?</div>
+                <a class="sign-up-text1" href="/Frontend/Client/Code/Html/log-in-page.html" id="signUpText1">Log In</a>
               </div>
-              <div class="signup-redirect">
-                <div class="sign-up-text">Don’t have an account?</div>
-                <a
-                  class="sign-up-text1"
-                  href="./log-in-page.html"
-                  id="signUpText1"
-                  >Log In</a
-                >
-              </div>
-              <a class="login-button"
-                ><div class="login-button1"></div>
-                <div class="sign-up">Sign Up</div></a
-              >
+              <a class="login-button"> 
+                <div class="login-button1"></div>
+                <div class="sign-up">Sign Up</div>
+              </a>
               <div class="by-signing-up">
                 By signing up you agree to WetStones terms and conditions
               </div>
               <div class="password-input">
-                <input
-                  class="password-input-child"
-                  type="password"
-                  placeholder="Enter Your Password"
-                  maxlength="{16}"
-                  minlength="{8}"
-                  required
-                /><a
-                  class="forgot-password"
-                  href="./forgot-password-page.html"
-                  id="forgotPassword"
-                  >Forgot Password?</a
-                >
+                <input class="password-input-child" type="password" placeholder="Enter Your Password" maxlength="{16}" minlength="{8}" required/>
+                <a class="forgot-password" href="/Frontend/Client/Code/Html/forgot-password-page.html" id="forgotPassword">
+                  Forgot Password?
+                </a>
               </div>
-              <input
-                class="email-input"
-                type="email"
-                placeholder="Enter your email"
-                required
-                autofocus
-              />
+              <input class="email-input" type="email" placeholder="Enter your email" required autofocus/>
             </div>
             <div class="form-header" id="form-header">
               <div class="form-header1">
                 <div class="sign-up1">Sign Up</div>
               </div>
-              <a
-                class="title"
-                href="./landing-page.html"
-                id="title"
-                data-animate-on-scroll
-                ><div class="wetstone">WetStone</div></a
-              >
+              <a class="title" href="/Frontend/Client/Code/Html/landing-page.html" id="title" data-animate-on-scroll>
+                <div class="wetstone">
+                  WetStone
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </main>
-
-    <script>
-      var signUpText1 = document.getElementById("signUpText1");
-      if (signUpText1) {
-        signUpText1.addEventListener("click", function (e) {
-          window.location.href = "./log-in-page.html";
-        });
-      }
-      
-      var forgotPassword = document.getElementById("forgotPassword");
-      if (forgotPassword) {
-        forgotPassword.addEventListener("click", function (e) {
-          window.location.href = "./forgot-password-page.html";
-        });
-      }
-      
-      var title = document.getElementById("title");
-      if (title) {
-        title.addEventListener("click", function (e) {
-          window.location.href = "./landing-page.html";
-        });
-      }
-      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
-      var observer = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (entry.isIntersecting || entry.intersectionRatio > 0) {
-              const targetElement = entry.target;
-              targetElement.classList.add("animate");
-              observer.unobserve(targetElement);
-            }
-          }
-        },
-        {
-          threshold: 0.15,
-        }
-      );
-      
-      for (let i = 0; i < scrollAnimElements.length; i++) {
-        observer.observe(scrollAnimElements[i]);
-      }
-      </script>
   </body>
+  <script>
+    var signUpText1 = document.getElementById("signUpText1");
+    if (signUpText1) {
+      signUpText1.addEventListener("click", function (e) {
+        window.location.href = "./log-in-page.html";
+      });
+    }
+    
+    var forgotPassword = document.getElementById("forgotPassword");
+    if (forgotPassword) {
+      forgotPassword.addEventListener("click", function (e) {
+        window.location.href = "./forgot-password-page.html";
+      });
+    }
+    
+    var title = document.getElementById("title");
+    if (title) {
+      title.addEventListener("click", function (e) {
+        window.location.href = "./landing-page.html";
+      });
+    }
+    var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+    var observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting || entry.intersectionRatio > 0) {
+            const targetElement = entry.target;
+            targetElement.classList.add("animate");
+            observer.unobserve(targetElement);
+          }
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+    
+    for (let i = 0; i < scrollAnimElements.length; i++) {
+      observer.observe(scrollAnimElements[i]);
+    }
+  </script>
 </html>
