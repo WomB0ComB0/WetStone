@@ -33,7 +33,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    width: 80%;
+    width: 100%;
 }
 
 .search-container input {
@@ -212,4 +212,8 @@
 
 .sub_btn:hover {
     background-color: rgb(227, 227, 60);
+}
+
+.modal-box {
+    background-color: rgb(46, 7, 119);
 }
