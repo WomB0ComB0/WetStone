@@ -1,0 +1,251 @@
+{
+    "description": "A New Flow",
+    "states": [
+      {
+        "name": "Trigger",
+        "type": "trigger",
+        "transitions": [
+          {
+            "next": "send_message_1",
+            "event": "incomingMessage"
+          },
+          {
+            "event": "incomingCall"
+          },
+          {
+            "event": "incomingConversationMessage"
+          },
+          {
+            "event": "incomingRequest"
+          },
+          {
+            "event": "incomingParent"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": -780,
+            "y": -10
+          }
+        }
+      },
+      {
+        "name": "send_message_1",
+        "type": "send-message",
+        "transitions": [
+          {
+            "next": "send_and_reply_1",
+            "event": "sent"
+          },
+          {
+            "event": "failed"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": -750,
+            "y": 220
+          },
+          "service": "{{trigger.message.InstanceSid}}",
+          "channel": "{{trigger.message.ChannelSid}}",
+          "from": "{{flow.channel.address}}",
+          "to": "{{contact.channel.address}}",
+          "body": "Hello, you have subscribed to WetStone the question of the day. You will receive a question on an array of possible topics on Monday-Friday and the weekly solutions on Saturday. As a bonus we will also send a fun fact of the day on Sunday."
+        }
+      },
+      {
+        "name": "split_1",
+        "type": "split-based-on",
+        "transitions": [
+          {
+            "next": "send_and_reply_2",
+            "event": "noMatch"
+          },
+          {
+            "next": "send_message_3",
+            "event": "match",
+            "conditions": [
+              {
+                "friendly_name": "If value contains 20",
+                "arguments": [
+                  "{{widgets.send_and_reply_1.inbound.Body}}"
+                ],
+                "type": "contains",
+                "value": "20"
+              }
+            ]
+          },
+          {
+            "next": "send_message_2",
+            "event": "match",
+            "conditions": [
+              {
+                "friendly_name": "If value contains IDK",
+                "arguments": [
+                  "{{widgets.send_and_reply_1.inbound.Body}}"
+                ],
+                "type": "contains",
+                "value": "IDK"
+              }
+            ]
+          }
+        ],
+        "properties": {
+          "input": "{{widgets.send_and_reply_1.inbound.Body}}",
+          "offset": {
+            "x": -470,
+            "y": 640
+          }
+        }
+      },
+      {
+        "name": "send_and_reply_1",
+        "type": "send-and-wait-for-reply",
+        "transitions": [
+          {
+            "next": "split_1",
+            "event": "incomingMessage"
+          },
+          {
+            "event": "timeout"
+          },
+          {
+            "event": "deliveryFailure"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": -700,
+            "y": 490
+          },
+          "service": "{{trigger.message.InstanceSid}}",
+          "channel": "{{trigger.message.ChannelSid}}",
+          "from": "{{flow.channel.address}}",
+          "body": "A rectangle was altered by increasing its length by 20 percent and decreasing its width by x percent. If these alterations decreased the area of the rectangle by 4 percent, what is the value of x.\n\nPlease respond with your answer or type \"IDK\":",
+          "timeout": "3600"
+        }
+      },
+      {
+        "name": "Copy_of_split_1",
+        "type": "split-based-on",
+        "transitions": [
+          {
+            "next": "send_and_reply_2",
+            "event": "noMatch"
+          },
+          {
+            "next": "send_message_3",
+            "event": "match",
+            "conditions": [
+              {
+                "friendly_name": "If value contains 20",
+                "arguments": [
+                  "{{widgets.send_and_reply_1.inbound.Body}}"
+                ],
+                "type": "contains",
+                "value": "20"
+              }
+            ]
+          },
+          {
+            "next": "send_message_2",
+            "event": "match",
+            "conditions": [
+              {
+                "friendly_name": "If value contains IDK",
+                "arguments": [
+                  "{{widgets.send_and_reply_1.inbound.Body}}"
+                ],
+                "type": "contains",
+                "value": "IDK"
+              }
+            ]
+          }
+        ],
+        "properties": {
+          "input": "{{widgets.send_and_reply_1.inbound.Body}}",
+          "offset": {
+            "x": -10,
+            "y": 320
+          }
+        }
+      },
+      {
+        "name": "send_message_3",
+        "type": "send-message",
+        "transitions": [
+          {
+            "event": "sent"
+          },
+          {
+            "event": "failed"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": 60,
+            "y": 680
+          },
+          "service": "{{trigger.message.InstanceSid}}",
+          "channel": "{{trigger.message.ChannelSid}}",
+          "from": "{{flow.channel.address}}",
+          "to": "{{contact.channel.address}}",
+          "body": "Good Job! see you tomorrow."
+        }
+      },
+      {
+        "name": "send_and_reply_2",
+        "type": "send-and-wait-for-reply",
+        "transitions": [
+          {
+            "next": "Copy_of_split_1",
+            "event": "incomingMessage"
+          },
+          {
+            "event": "timeout"
+          },
+          {
+            "event": "deliveryFailure"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": -790,
+            "y": 700
+          },
+          "service": "{{trigger.message.InstanceSid}}",
+          "channel": "{{trigger.message.ChannelSid}}",
+          "from": "{{flow.channel.address}}",
+          "body": "Try agin!",
+          "timeout": "3600"
+        }
+      },
+      {
+        "name": "send_message_2",
+        "type": "send-message",
+        "transitions": [
+          {
+            "event": "sent"
+          },
+          {
+            "event": "failed"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": -50,
+            "y": -15
+          },
+          "service": "{{trigger.message.InstanceSid}}",
+          "channel": "{{trigger.message.ChannelSid}}",
+          "from": "{{flow.channel.address}}",
+          "to": "{{contact.channel.address}}",
+          "body": "It's OK, let me explain. \n100-(96/120)=20\nWe will explain more at the end of the week. \nSee you tomorrow"
+        }
+      }
+    ],
+    "initial_state": "Trigger",
+    "flags": {
+      "allow_concurrent_calls": true
+    }
+  }  
